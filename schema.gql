@@ -1,0 +1,20 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type TripType {
+  _id: ID!
+  title: String!
+  destination: String!
+  startDate: String!
+  endDate: String!
+  userId: String
+}
+
+type Query {
+  trips: [TripType!]!
+}
+
+type Mutation {
+  createTrip(title: String!, destination: String!, startDate: String!, endDate: String!): TripType!
+}
