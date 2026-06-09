@@ -7,7 +7,7 @@ import { ThemeService } from './core/services/theme.service';
   imports: [NavbarComponent, RouterOutlet],
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrl: './app.component.scss',
 })
 export class App {
   protected title = 'frontend';

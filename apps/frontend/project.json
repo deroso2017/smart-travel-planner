@@ -23,7 +23,7 @@
         ],
         "styles": [
           "apps/frontend/src/material-theme.scss",
-          "apps/frontend/src/styles.css"
+          "apps/frontend/src/styles.scss"
         ]
       },
       "configurations": {

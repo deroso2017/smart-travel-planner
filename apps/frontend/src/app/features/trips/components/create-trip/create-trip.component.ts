@@ -15,7 +15,7 @@ function endAfterStart(group: AbstractControl): ValidationErrors | null {
 @Component({
   selector: 'app-create-trip',
   templateUrl: './create-trip.component.html',
-  styleUrl: './create-trip.component.css',
+  styleUrl: './create-trip.component.scss',
   imports: [ReactiveFormsModule, MatCardModule, MatFormFieldModule, MatInputModule, MatButtonModule],
 })
 export class CreateTripComponent {

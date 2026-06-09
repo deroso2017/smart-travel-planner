@@ -22,7 +22,7 @@ interface TripsResult {
 @Component({
   selector: 'app-trips-list',
   templateUrl: './trips-list.component.html',
-  styleUrl: './trips-list.component.css',
+  styleUrl: './trips-list.component.scss',
   imports: [AsyncPipe, DatePipe, MatCardModule, MatIconModule, MatChipsModule, MatProgressSpinnerModule],
 })
 export class TripsListComponent {

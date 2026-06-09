@@ -9,7 +9,7 @@ import { ThemeService } from '../../core/services/theme.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css',
+  styleUrl: './navbar.component.scss',
   imports: [MatToolbarModule, MatButtonModule, MatIconModule, MatTooltipModule, RouterLink, RouterLinkActive],
 })
 export class NavbarComponent {
