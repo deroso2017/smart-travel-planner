@@ -13,7 +13,7 @@ import { TripModule } from './trip/trip.module';
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'schema.gql'),
-      playground: true,
+      graphiql: true,
     }),
     TripModule,
   ],
