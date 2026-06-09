@@ -3,7 +3,7 @@
 # ------------------------------------------------------
 
 type TripType {
-  _id: ID!
+  id: ID!
   title: String!
   destination: String!
   startDate: String!
@@ -11,10 +11,28 @@ type TripType {
   userId: String
 }
 
+type UserType {
+  id: ID!
+  email: String!
+}
+
+type AuthResponse {
+  accessToken: String!
+}
+
 type Query {
+  users: [UserType!]!
+  userByEmail(email: String!): UserType
   trips: [TripType!]!
 }
 
 type Mutation {
+  register(input: UserDto!): UserType!
+  login(input: UserDto!): AuthResponse!
   createTrip(title: String!, destination: String!, startDate: String!, endDate: String!): TripType!
+}
+
+input UserDto {
+  email: String!
+  password: String!
 }

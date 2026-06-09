@@ -17,7 +17,6 @@ export class Trip {
   @Prop({ required: true })
   endDate!: Date;
 
-  // IMPORTANT for later (auth)
   @Prop({ required: false })
   userId?: string;
 }

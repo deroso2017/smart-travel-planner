@@ -1,12 +1,15 @@
 import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
+import { UseGuards } from '@nestjs/common';
 import { TripService } from './trip.service';
 import { TripType } from './trip.type';
+import { JwtAuthGuard } from '../auth/jwt/jwt.guard';
 
 @Resolver()
 export class TripResolver {
   constructor(private tripService: TripService) {}
 
   @Query(() => [TripType])
+  @UseGuards(JwtAuthGuard)
   trips() {
     return this.tripService.findAll();
   }

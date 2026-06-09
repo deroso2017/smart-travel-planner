@@ -3,7 +3,7 @@ import { ObjectType, Field, ID } from '@nestjs/graphql';
 @ObjectType()
 export class TripType {
   @Field(() => ID)
-  _id!: string;
+  id!: string;
 
   @Field()
   title!: string;
