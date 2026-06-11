@@ -1,0 +1,138 @@
+<div class="min-h-screen bg-[var(--mat-sys-surface)] p-6 max-w-2xl mx-auto">
+      @if (trip$ | async; as result) {
+        @if (result.data?.trip; as trip) {
+          <div class="flex items-center gap-3 mb-8">
+            <button mat-icon-button (click)="router.navigate(['/my-trips'])">
+              <mat-icon>arrow_back</mat-icon>
+            </button>
+            <div class="flex-1">
+              <h1 class="text-2xl font-bold">{{ trip.title }}</h1>
+              <p
+                class="text-[var(--mat-sys-on-surface-variant)] flex items-center gap-1"
+              >
+                <mat-icon class="text-sm">location_on</mat-icon
+                >{{ trip.destination }}
+              </p>
+            </div>
+            <button
+              mat-icon-button
+              color="warn"
+              (click)="confirmDelete(trip.id!)"
+              [disabled]="deleting()"
+            >
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+
+          @if (!editing()) {
+            <mat-card class="rounded-2xl mb-6">
+              <mat-card-content class="p-6 flex flex-col gap-4">
+                <div class="flex items-center gap-3">
+                  <mat-icon class="text-[var(--mat-sys-primary)]"
+                    >calendar_today</mat-icon
+                  >
+                  <div>
+                    <p class="text-xs text-[var(--mat-sys-on-surface-variant)]">
+                      Start Date
+                    </p>
+                    <p class="font-medium">
+                      {{ trip.startDate | date: 'mediumDate' }}
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <mat-icon class="text-[var(--mat-sys-primary)]"
+                    >event</mat-icon
+                  >
+                  <div>
+                    <p class="text-xs text-[var(--mat-sys-on-surface-variant)]">
+                      End Date
+                    </p>
+                    <p class="font-medium">
+                      {{ trip.endDate | date: 'mediumDate' }}
+                    </p>
+                  </div>
+                </div>
+              </mat-card-content>
+            </mat-card>
+
+            <button
+              mat-flat-button
+              color="primary"
+              class="w-full !rounded-xl !py-3"
+              (click)="startEdit(trip)"
+            >
+              <mat-icon>edit</mat-icon> Edit Trip
+            </button>
+          } @else {
+            <form
+              [formGroup]="form"
+              (ngSubmit)="save(trip.id!)"
+              class="flex flex-col gap-4"
+            >
+              <mat-form-field appearance="outline">
+                <mat-label>Title</mat-label>
+                <input matInput formControlName="title" />
+                @if (
+                  form.get('title')?.hasError('required') &&
+                  form.get('title')?.touched
+                ) {
+                  <mat-error>Title is required</mat-error>
+                }
+              </mat-form-field>
+
+              <mat-form-field appearance="outline">
+                <mat-label>Destination</mat-label>
+                <input matInput formControlName="destination" />
+                @if (
+                  form.get('destination')?.hasError('required') &&
+                  form.get('destination')?.touched
+                ) {
+                  <mat-error>Destination is required</mat-error>
+                }
+              </mat-form-field>
+
+              <mat-form-field appearance="outline">
+                <mat-label>Start Date</mat-label>
+                <input matInput type="date" formControlName="startDate" />
+              </mat-form-field>
+
+              <mat-form-field appearance="outline">
+                <mat-label>End Date</mat-label>
+                <input matInput type="date" formControlName="endDate" />
+                @if (
+                  form.hasError('endBeforeStart') &&
+                  form.get('endDate')?.touched
+                ) {
+                  <mat-error>End date must be after start date</mat-error>
+                }
+              </mat-form-field>
+
+              <div class="flex gap-3">
+                <button
+                  mat-stroked-button
+                  type="button"
+                  class="flex-1 !rounded-xl"
+                  (click)="editing.set(false)"
+                >
+                  Cancel
+                </button>
+                <button
+                  mat-flat-button
+                  color="primary"
+                  type="submit"
+                  class="flex-1 !rounded-xl"
+                  [disabled]="saving()"
+                >
+                  {{ saving() ? 'Saving...' : 'Save Changes' }}
+                </button>
+              </div>
+            </form>
+          }
+        }
+      } @else {
+        <div class="flex justify-center py-20">
+          <mat-spinner diameter="40"></mat-spinner>
+        </div>
+      }
+    </div>

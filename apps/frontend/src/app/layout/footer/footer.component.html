@@ -1,0 +1,95 @@
+<footer
+  class="relative mt-16 overflow-hidden border-t border-white/10 bg-gradient-to-b from-blue-600 via-blue-700 to-blue-800 text-white"
+>
+  <!-- subtle glow background -->
+  <div class="absolute inset-0 opacity-20">
+    <div class="absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-white blur-3xl"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-6xl px-6 py-14">
+
+    <!-- Top -->
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-3">
+
+      <!-- Brand -->
+      <div>
+        <h2 class="text-2xl font-semibold tracking-tight text-white">
+          Smart Travel Planner ✈️
+        </h2>
+
+        <p class="mt-4 text-sm leading-relaxed text-white/70">
+          Plan your trips, track destinations, and manage your entire travel experience in one beautiful place.
+        </p>
+
+        <div class="mt-6 h-1 w-16 rounded-full bg-white/30"></div>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h3 class="text-xs font-semibold uppercase tracking-widest text-white/80">
+          Explore
+        </h3>
+
+        <ul class="mt-5 space-y-3 text-sm">
+          <li>
+            <a routerLink="/"
+               class="text-white/70 hover:text-white transition">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a routerLink="/trips"
+               class="text-white/70 hover:text-white transition">
+              Trips
+            </a>
+          </li>
+
+          <li>
+            <a routerLink="/dashboard"
+               class="text-white/70 hover:text-white transition">
+              Dashboard
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div>
+        <h3 class="text-xs font-semibold uppercase tracking-widest text-white/80">
+          Connect
+        </h3>
+
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a href="#"
+             class="rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm text-white/80 backdrop-blur hover:bg-white/20 hover:text-white transition">
+            GitHub
+          </a>
+
+          <a href="#"
+             class="rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm text-white/80 backdrop-blur hover:bg-white/20 hover:text-white transition">
+            LinkedIn
+          </a>
+
+          <a href="mailto:"
+             class="rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm text-white/80 backdrop-blur hover:bg-white/20 hover:text-white transition">
+            Email
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom -->
+    <div
+      class="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-white/60 md:flex-row md:items-center md:justify-between"
+    >
+      <p>© {{ year }} Smart Travel Planner. All rights reserved.</p>
+
+      <p class="text-white/50">
+        Built with Angular • NestJS • GraphQL
+      </p>
+    </div>
+
+  </div>
+</footer>

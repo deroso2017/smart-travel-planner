@@ -1,15 +1,20 @@
-<mat-card class="border-2 border-solid border-red-600">
+<mat-card class="shadow-2xl">
   <mat-card-header>
     <mat-card-title>New Trip</mat-card-title>
     <mat-card-subtitle>Plan your next adventure</mat-card-subtitle>
   </mat-card-header>
 
   <mat-card-content>
-    <form [formGroup]="form" (ngSubmit)="submit()" class="trip-form">
-
+    <form
+      [formGroup]="form"
+      (ngSubmit)="submit()"
+      class="flex flex-col gap-2 pt-4"
+    >
+      <!-- Title -->
       <mat-form-field appearance="outline">
         <mat-label>Title</mat-label>
-        <input matInput formControlName="title" placeholder="e.g. Summer in Japan">
+        <input matInput formControlName="title" placeholder="e.g. Summer in Japan" />
+
         @if (form.get('title')?.hasError('required') && form.get('title')?.touched) {
           <mat-error>Title is required</mat-error>
         } @else if (form.get('title')?.hasError('minlength') && form.get('title')?.touched) {
@@ -17,26 +22,31 @@
         }
       </mat-form-field>
 
+      <!-- Destination -->
       <mat-form-field appearance="outline">
         <mat-label>Destination</mat-label>
-        <input matInput formControlName="destination" placeholder="e.g. Tokyo, Japan">
+        <input matInput formControlName="destination" placeholder="e.g. Tokyo, Japan" />
+
         @if (form.get('destination')?.hasError('required') && form.get('destination')?.touched) {
           <mat-error>Destination is required</mat-error>
         }
       </mat-form-field>
 
-      <div class="date-row">
-        <mat-form-field appearance="outline">
+      <!-- Dates -->
+      <div class="flex gap-4">
+        <mat-form-field appearance="outline" class="flex-1">
           <mat-label>Start Date</mat-label>
-          <input matInput type="date" formControlName="startDate">
+          <input matInput type="date" formControlName="startDate" />
+
           @if (form.get('startDate')?.hasError('required') && form.get('startDate')?.touched) {
             <mat-error>Start date is required</mat-error>
           }
         </mat-form-field>
 
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline" class="flex-1">
           <mat-label>End Date</mat-label>
-          <input matInput type="date" formControlName="endDate">
+          <input matInput type="date" formControlName="endDate" />
+
           @if (form.get('endDate')?.hasError('required') && form.get('endDate')?.touched) {
             <mat-error>End date is required</mat-error>
           } @else if (form.hasError('endBeforeStart') && form.get('endDate')?.touched) {
@@ -45,12 +55,12 @@
         </mat-form-field>
       </div>
 
-      <div class="form-actions">
+      <!-- Actions -->
+      <div class="flex justify-end">
         <button mat-flat-button type="submit" [disabled]="submitting()">
           {{ submitting() ? 'Creating...' : 'Create Trip' }}
         </button>
       </div>
-
     </form>
   </mat-card-content>
 </mat-card>

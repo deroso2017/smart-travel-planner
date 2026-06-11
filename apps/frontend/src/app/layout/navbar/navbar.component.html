@@ -1,0 +1,57 @@
+<nav
+  class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 shadow-md bg-blue-600 border-t border-white/10 bg-gradient-to-b from-blue-600 via-blue-700 to-blue-800 text-white"
+>
+  <button mat-icon-button (click)="drawer.toggle()">
+    <mat-icon class="text-white">menu</mat-icon>
+  </button>
+  <a class="flex items-center gap-3 no-underline text-white mr-auto">
+    <mat-icon>flight_takeoff</mat-icon>
+    <span class="text-xl font-bold tracking-wide">Smart Travel Planner</span>
+  </a>
+
+  <div class="flex items-center gap-4">
+    @if (auth.isLoggedIn()) {
+      <a
+        routerLink="/my-trips"
+        routerLinkActive="underline font-semibold"
+        class="text-white hover:text-blue-200 transition-colors"
+      >
+        My Trips
+      </a>
+      <a
+        routerLink="/create-trip"
+        routerLinkActive="underline font-semibold"
+        class="text-white hover:text-blue-200 transition-colors"
+      >
+        Create Trip
+      </a>
+      <button
+        mat-stroked-button
+        class="!border-white !text-white"
+        (click)="auth.logout()"
+      >
+        <mat-icon>logout</mat-icon> Logout
+      </button>
+    } @else {
+      <a routerLink="/auth" [queryParams]="{ mode: 'login' }">
+        <button mat-stroked-button class="!border-white !text-white">
+          Sign In
+        </button>
+      </a>
+      <a routerLink="/auth" [queryParams]="{ mode: 'register' }">
+        <button mat-flat-button class="!bg-white !text-blue-700 !font-semibold">
+          Get Started
+        </button>
+      </a>
+    }
+    <button
+      mat-icon-button
+      [matTooltip]="theme.isDark()() ? 'Light mode' : 'Dark mode'"
+      (click)="theme.toggleTheme()"
+    >
+      <mat-icon class="text-white dark:text-white">
+        {{ theme.isDark()() ? 'light_mode' : 'dark_mode' }}
+      </mat-icon>
+    </button>
+  </div>
+</nav>

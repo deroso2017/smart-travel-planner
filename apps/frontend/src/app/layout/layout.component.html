@@ -1,0 +1,21 @@
+<mat-sidenav-container class="min-h-screen">
+
+  <mat-sidenav #drawer mode="over" class="border-r">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    @if (showLayout()) {
+      <app-navbar [drawer]="drawer"></app-navbar>
+    }
+
+    <ng-content></ng-content>
+
+    @if (showLayout()) {
+      <app-footer></app-footer>
+    }
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

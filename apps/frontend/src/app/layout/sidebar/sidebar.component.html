@@ -1,0 +1,66 @@
+<div
+  class="h-full p-6 flex flex-col transition-colors duration-300
+         bg-[var(--mat-sys-surface)] text-[var(--mat-sys-on-surface)]"
+>
+
+  <!-- Brand -->
+  <div class="mb-10">
+    <div class="flex items-center gap-3">
+
+      <div
+        class="flex h-10 w-10 items-center justify-center rounded-xl
+               bg-[var(--mat-sys-primary)] text-[var(--mat-sys-on-primary)]
+               shadow-md"
+      >
+        <mat-icon>flight_takeoff</mat-icon>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold tracking-wide">
+          Smart Travel Planner
+        </h2>
+
+        <p class="text-xs text-[var(--mat-sys-on-surface-variant)]">
+          Plan smarter journeys
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="flex flex-col gap-2">
+
+    <a
+      routerLink="/my-trips"
+      routerLinkActive="bg-[var(--mat-sys-secondary-container)] text-[var(--mat-sys-on-secondary-container)]"
+      class="group flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium
+             text-[var(--mat-sys-on-surface-variant)]
+             hover:bg-[var(--mat-sys-surface-container)] transition"
+    >
+      <mat-icon
+        class="text-[var(--mat-sys-outline)] group-hover:text-[var(--mat-sys-primary)] transition"
+      >
+        luggage
+      </mat-icon>
+      My Trips
+    </a>
+
+    <a
+      routerLink="/create-trip"
+      routerLinkActive="bg-[var(--mat-sys-secondary-container)] text-[var(--mat-sys-on-secondary-container)]"
+      class="group flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium
+             text-[var(--mat-sys-on-surface-variant)]
+             hover:bg-[var(--mat-sys-surface-container)] transition"
+    >
+      <mat-icon
+        class="text-[var(--mat-sys-outline)] group-hover:text-[var(--mat-sys-primary)] transition"
+      >
+        add_circle
+      </mat-icon>
+      Create Trip
+    </a>
+
+  </nav>
+
+</div>

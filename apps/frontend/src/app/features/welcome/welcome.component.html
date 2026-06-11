@@ -1,0 +1,45 @@
+<div
+  class="min-h-screen bg-gradient-to-br from-blue-600 to-indigo-800 flex flex-col items-center justify-center px-4 text-white"
+>
+  <div class="text-center mb-12">
+    <div class="flex items-center justify-center gap-3 mb-4">
+      <mat-icon class="text-5xl !w-12 !h-12">flight_takeoff</mat-icon>
+      <h1 class="text-5xl font-bold tracking-tight">Smart Travel Planner</h1>
+    </div>
+    <p class="text-xl text-blue-100 max-w-xl mx-auto mt-4">
+      Plan your adventures, organize your trips, and explore the world — all in
+      one place.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl w-full mb-12">
+    @for (feature of features; track feature.icon) {
+      <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center">
+        <mat-icon class="text-4xl !w-10 !h-10 mb-3 text-blue-200">{{
+          feature.icon
+        }}</mat-icon>
+        <h3 class="font-semibold text-lg mb-1">{{ feature.title }}</h3>
+        <p class="text-blue-100 text-sm">{{ feature.desc }}</p>
+      </div>
+    }
+  </div>
+
+  <div class="flex gap-4">
+    <a routerLink="/auth" [queryParams]="{ mode: 'register' }">
+      <button
+        mat-flat-button
+        class="!bg-white !text-blue-700 !font-bold !px-8 !py-3 !text-base !rounded-full"
+      >
+        Get Started
+      </button>
+    </a>
+    <a routerLink="/auth" [queryParams]="{ mode: 'login' }">
+      <button
+        mat-stroked-button
+        class="!border-white !text-white !font-semibold !px-8 !py-3 !text-base !rounded-full"
+      >
+        Sign In
+      </button>
+    </a>
+  </div>
+</div>

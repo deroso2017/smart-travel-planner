@@ -24,15 +24,35 @@ type Query {
   users: [UserType!]!
   userByEmail(email: String!): UserType
   trips: [TripType!]!
+  trip(id: ID!): TripType
 }
 
 type Mutation {
   register(input: UserDto!): UserType!
   login(input: UserDto!): AuthResponse!
-  createTrip(title: String!, destination: String!, startDate: String!, endDate: String!): TripType!
+  createTrip(input: CreateTripDto!): TripType!
+  updateTrip(input: UpdateTripDto!): TripType
+  deleteTrip(id: ID!): TripType
 }
 
 input UserDto {
   email: String!
   password: String!
+}
+
+input CreateTripDto {
+  title: String!
+  destination: String!
+  startDate: String!
+  endDate: String!
+  userId: String
+}
+
+input UpdateTripDto {
+  title: String
+  destination: String
+  startDate: String
+  endDate: String
+  userId: String
+  id: ID!
 }
