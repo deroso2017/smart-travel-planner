@@ -34,15 +34,21 @@ A full-stack travel planning application built with modern web technologies. Pla
 
 ## ✨ Features
 
-- 🗺️ **Smart Trip Planning** - AI-powered itinerary generation and optimization
-- 🤝 **Collaborative Planning** - Real-time collaboration with friends and travel companions
-- 📍 **Location Intelligence** - Integrated maps and location-based recommendations
-- 💰 **Budget Tracking** - Track expenses and split costs among travelers
-- 🎒 **Packing Lists** - Smart packing recommendations based on destination and season
-- 📱 **Responsive Design** - Works seamlessly across all devices
-- 🔐 **Secure Authentication** - JWT-based auth with role-based access control
-- 🌙 **Dark Mode Support** - Beautiful dark and light themes
-- ⚡ **Real-time Updates** - GraphQL subscriptions for live collaboration
+- ✨ Current Features
+- 🔐 Secure Authentication - JWT-based authentication with role-based access control
+- 📱 Responsive Design - Optimized experience across desktop, tablet, and mobile devices
+- 🌙 Dark Mode Support - Beautiful light and dark themes
+- ⚡ Modern Architecture - Built with GraphQL and a scalable full-stack architecture
+- 🚀 Planned Features (Upcoming Releases)
+
+The following features are currently in development and planned for future versions:
+
+- 🗺️ Smart Trip Planning - AI-powered itinerary generation and trip optimization
+- 🤝 Collaborative Planning - Real-time collaboration with friends and travel companions
+- 📍 Location Intelligence - Interactive maps and location-based recommendations
+- 💰 Budget Tracking - Expense management and cost-splitting for group trips
+- 🎒 Packing Lists - Smart packing recommendations based on destination, weather, and season
+- ⚡ Real-time Updates - Live collaboration powered by GraphQL subscriptions
 
 ---
 
@@ -142,53 +148,59 @@ UI Update
 ## 🛠️ Tech Stack
 
 ### Frontend
-| Technology | Version | Purpose |
-|:-----------|:-------:|---------|
-| ![Angular](https://img.shields.io/badge/Angular-21.2.9-DD0031?logo=angular) | 21.2.9 | Web Framework |
-| ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-3178C6?logo=typescript) | 5.9.2 | Language |
-| ![Angular Material](https://img.shields.io/badge/Angular%20Material-21.2.14-FF6B6B?logo=material-design) | 21.2.14 | UI Components |
-| ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4.19-06B6D4?logo=tailwindcss) | 3.4.19 | Styling |
-| ![RxJS](https://img.shields.io/badge/RxJS-7.8.0-B81D13?logo=reactivex) | 7.8.0 | Reactive Programming |
-| ![Apollo Client](https://img.shields.io/badge/Apollo%20Client-14.0.0-311C87?logo=apollographql) | 14.0.0 | GraphQL Client |
+
+| Technology                                                                                               | Version | Purpose              |
+| :------------------------------------------------------------------------------------------------------- | :-----: | -------------------- |
+| ![Angular](https://img.shields.io/badge/Angular-21.2.9-DD0031?logo=angular)                              | 21.2.9  | Web Framework        |
+| ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-3178C6?logo=typescript)                      |  5.9.2  | Language             |
+| ![Angular Material](https://img.shields.io/badge/Angular%20Material-21.2.14-FF6B6B?logo=material-design) | 21.2.14 | UI Components        |
+| ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4.19-06B6D4?logo=tailwindcss)              | 3.4.19  | Styling              |
+| ![RxJS](https://img.shields.io/badge/RxJS-7.8.0-B81D13?logo=reactivex)                                   |  7.8.0  | Reactive Programming |
+| ![Apollo Client](https://img.shields.io/badge/Apollo%20Client-14.0.0-311C87?logo=apollographql)          | 14.0.0  | GraphQL Client       |
 
 ### Backend
-| Technology | Version | Purpose |
-|:-----------|:-------:|---------|
-| ![NestJS](https://img.shields.io/badge/NestJS-11.1.26-E0234E?logo=nestjs) | 11.1.26 | Backend Framework |
-| ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-3178C6?logo=typescript) | 5.9.2 | Language |
-| ![GraphQL](https://img.shields.io/badge/GraphQL-16.14.1-E10098?logo=graphql) | 16.14.1 | API Query Language |
-| ![Apollo Server](https://img.shields.io/badge/Apollo%20Server-5.5.1-311C87?logo=apollographql) | 5.5.1 | GraphQL Server |
-| ![Express](https://img.shields.io/badge/Express-5.2.1-90C53F?logo=express) | 5.2.1 | HTTP Server |
+
+| Technology                                                                                     | Version | Purpose            |
+| :--------------------------------------------------------------------------------------------- | :-----: | ------------------ |
+| ![NestJS](https://img.shields.io/badge/NestJS-11.1.26-E0234E?logo=nestjs)                      | 11.1.26 | Backend Framework  |
+| ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-3178C6?logo=typescript)            |  5.9.2  | Language           |
+| ![GraphQL](https://img.shields.io/badge/GraphQL-16.14.1-E10098?logo=graphql)                   | 16.14.1 | API Query Language |
+| ![Apollo Server](https://img.shields.io/badge/Apollo%20Server-5.5.1-311C87?logo=apollographql) |  5.5.1  | GraphQL Server     |
+| ![Express](https://img.shields.io/badge/Express-5.2.1-90C53F?logo=express)                     |  5.2.1  | HTTP Server        |
 
 ### Database & ORM
-| Technology | Version | Purpose |
-|:-----------|:-------:|---------|
-| ![MongoDB](https://img.shields.io/badge/MongoDB-9.6.3-13AA52?logo=mongodb) | 9.6.3 | NoSQL Database |
-| ![Mongoose](https://img.shields.io/badge/Mongoose-9.6.3-880000) | 9.6.3 | ODM |
+
+| Technology                                                                 | Version | Purpose        |
+| :------------------------------------------------------------------------- | :-----: | -------------- |
+| ![MongoDB](https://img.shields.io/badge/MongoDB-9.6.3-13AA52?logo=mongodb) |  9.6.3  | NoSQL Database |
+| ![Mongoose](https://img.shields.io/badge/Mongoose-9.6.3-880000)            |  9.6.3  | ODM            |
 
 ### Authentication
-| Technology | Version | Purpose |
-|:-----------|:-------:|---------|
-| ![JWT](https://img.shields.io/badge/JWT-4.0.1-000000?logo=json-web-tokens) | 4.0.1 | Token-based Auth |
-| ![Passport](https://img.shields.io/badge/Passport-0.7.0-34E27A?logo=passport) | 0.7.0 | Authentication Middleware |
-| ![bcrypt](https://img.shields.io/badge/bcrypt-6.0.0-CC342D) | 6.0.0 | Password Hashing |
+
+| Technology                                                                    | Version | Purpose                   |
+| :---------------------------------------------------------------------------- | :-----: | ------------------------- |
+| ![JWT](https://img.shields.io/badge/JWT-4.0.1-000000?logo=json-web-tokens)    |  4.0.1  | Token-based Auth          |
+| ![Passport](https://img.shields.io/badge/Passport-0.7.0-34E27A?logo=passport) |  0.7.0  | Authentication Middleware |
+| ![bcrypt](https://img.shields.io/badge/bcrypt-6.0.0-CC342D)                   |  6.0.0  | Password Hashing          |
 
 ### Build & Development Tools
-| Technology | Version | Purpose |
-|:-----------|:-------:|---------|
-| ![Nx](https://img.shields.io/badge/Nx-22.7.5-143055?logo=nx) | 22.7.5 | Monorepo Management |
-| ![Vite](https://img.shields.io/badge/Vite-7.3.2-646CFF?logo=vite) | 7.3.2 | Build Tool |
-| ![Jest](https://img.shields.io/badge/Jest-30.3.0-C21325?logo=jest) | 30.3.0 | Testing Framework |
-| ![Vitest](https://img.shields.io/badge/Vitest-4.0.9-6E9F18?logo=vitest) | 4.0.9 | Unit Testing |
-| ![Playwright](https://img.shields.io/badge/Playwright-1.36.0-2EAD33?logo=playwright) | 1.36.0 | E2E Testing |
-| ![ESLint](https://img.shields.io/badge/ESLint-9.8.0-4B3BE5?logo=eslint) | 9.8.0 | Linting |
-| ![Prettier](https://img.shields.io/badge/Prettier-3.8.1-F7B93E?logo=prettier) | 3.8.1 | Code Formatting |
+
+| Technology                                                                           | Version | Purpose             |
+| :----------------------------------------------------------------------------------- | :-----: | ------------------- |
+| ![Nx](https://img.shields.io/badge/Nx-22.7.5-143055?logo=nx)                         | 22.7.5  | Monorepo Management |
+| ![Vite](https://img.shields.io/badge/Vite-7.3.2-646CFF?logo=vite)                    |  7.3.2  | Build Tool          |
+| ![Jest](https://img.shields.io/badge/Jest-30.3.0-C21325?logo=jest)                   | 30.3.0  | Testing Framework   |
+| ![Vitest](https://img.shields.io/badge/Vitest-4.0.9-6E9F18?logo=vitest)              |  4.0.9  | Unit Testing        |
+| ![Playwright](https://img.shields.io/badge/Playwright-1.36.0-2EAD33?logo=playwright) | 1.36.0  | E2E Testing         |
+| ![ESLint](https://img.shields.io/badge/ESLint-9.8.0-4B3BE5?logo=eslint)              |  9.8.0  | Linting             |
+| ![Prettier](https://img.shields.io/badge/Prettier-3.8.1-F7B93E?logo=prettier)        |  3.8.1  | Code Formatting     |
 
 ### DevOps & Containerization
-| Technology | Version | Purpose |
-|:-----------|:-------:|---------|
-| ![Docker](https://img.shields.io/badge/Docker-latest-2496ED?logo=docker) | Latest | Containerization |
-| ![Docker Compose](https://img.shields.io/badge/Docker%20Compose-latest-2496ED?logo=docker) | Latest | Multi-container Setup |
+
+| Technology                                                                                 | Version | Purpose               |
+| :----------------------------------------------------------------------------------------- | :-----: | --------------------- |
+| ![Docker](https://img.shields.io/badge/Docker-latest-2496ED?logo=docker)                   | Latest  | Containerization      |
+| ![Docker Compose](https://img.shields.io/badge/Docker%20Compose-latest-2496ED?logo=docker) | Latest  | Multi-container Setup |
 
 ---
 
@@ -303,14 +315,14 @@ smart-travel-planner/
 
 ### Directory Purposes
 
-| Directory | Purpose |
-|:----------|---------|
-| `apps/client` | Angular frontend application with all UI components and pages |
-| `apps/api` | NestJS backend with GraphQL API, database models, and business logic |
-| `libs/shared/types` | TypeScript types, interfaces, and enums shared across monorepo |
-| `libs/shared/ui` | Reusable UI components used by frontend and applications |
-| `libs/shared/utils` | Utility functions and helpers shared across projects |
-| `libs/api/products` | API-specific product service library |
+| Directory           | Purpose                                                              |
+| :------------------ | -------------------------------------------------------------------- |
+| `apps/client`       | Angular frontend application with all UI components and pages        |
+| `apps/api`          | NestJS backend with GraphQL API, database models, and business logic |
+| `libs/shared/types` | TypeScript types, interfaces, and enums shared across monorepo       |
+| `libs/shared/ui`    | Reusable UI components used by frontend and applications             |
+| `libs/shared/utils` | Utility functions and helpers shared across projects                 |
+| `libs/api/products` | API-specific product service library                                 |
 
 ---
 
@@ -326,12 +338,14 @@ smart-travel-planner/
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/deroso2017/smart-travel-planner.git
    cd smart-travel-planner
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    # or if you encounter peer dependency issues
@@ -339,23 +353,25 @@ smart-travel-planner/
    ```
 
 3. **Set up environment variables**
+
    ```bash
    # Create .env file in apps/api
    cp apps/api/.env.example apps/api/.env
-   
+
    # Create .env file in apps/client
    cp apps/client/.env.example apps/client/.env
    ```
 
 4. **Start development servers**
+
    ```bash
    # Option 1: Start both frontend and backend together
    npm run start:all
-   
+
    # Option 2: Start them separately in different terminals
    # Terminal 1: Frontend
    npm run start:client
-   
+
    # Terminal 2: Backend
    npm run start:api
    ```
@@ -610,21 +626,22 @@ docker build -f apps/api/Dockerfile -t travel-planner-api:latest .
 ### Docker Configuration
 
 **docker-compose.yml structure:**
+
 ```yaml
 services:
   api:
     build: ./apps/api
     ports:
-      - "3333:3333"
+      - '3333:3333'
     environment:
       - MONGODB_URI=mongodb://mongo:27017/travel-planner
     depends_on:
       - mongo
-  
+
   mongo:
     image: mongo:6.0
     ports:
-      - "27017:27017"
+      - '27017:27017'
     volumes:
       - mongodb_data:/data/db
 
@@ -641,6 +658,7 @@ volumes:
 **Technologies:** Angular 21, TypeScript, Material Design, Tailwind CSS, RxJS
 
 **Key Features:**
+
 - Dashboard with trip overview
 - Trip creation and management UI
 - Interactive map view for destinations
@@ -649,6 +667,7 @@ volumes:
 - Responsive design for all devices
 
 **File Structure:**
+
 ```
 apps/client/src/app/
 ├── components/        # Reusable components
@@ -665,6 +684,7 @@ apps/client/src/app/
 **Technologies:** NestJS, GraphQL, Apollo Server, MongoDB, Mongoose
 
 **Key Modules:**
+
 - **Auth Module** - JWT authentication, user registration/login
 - **Users Module** - User profile management
 - **Trips Module** - Trip CRUD operations
@@ -672,6 +692,7 @@ apps/client/src/app/
 - **GraphQL Module** - API schema and resolvers
 
 **GraphQL Schema:**
+
 ```graphql
 type User {
   id: ID!
@@ -704,7 +725,9 @@ type Expense {
 ### Shared Libraries
 
 #### `libs/shared/types`
+
 Centralized TypeScript types and interfaces:
+
 ```typescript
 // Models
 export interface User { ... }
@@ -721,7 +744,9 @@ export interface UpdateTripDTO { ... }
 ```
 
 #### `libs/shared/ui`
+
 Reusable UI components:
+
 ```typescript
 // Material Design Components
 - Button
@@ -737,22 +762,22 @@ Reusable UI components:
 ```
 
 #### `libs/shared/utils`
+
 Utility functions:
+
 ```typescript
 // Validators
-- validateEmail()
-- validatePhoneNumber()
-- validateTripDates()
-
-// Formatters
-- formatCurrency()
-- formatDate()
-- formatAddress()
-
-// Helpers
-- calculateExpenseSplit()
-- groupExpensesByCategory()
-- getDistanceBetweenLocations()
+-validateEmail() -
+  validatePhoneNumber() -
+  validateTripDates() -
+  // Formatters
+  formatCurrency() -
+  formatDate() -
+  formatAddress() -
+  // Helpers
+  calculateExpenseSplit() -
+  groupExpensesByCategory() -
+  getDistanceBetweenLocations();
 ```
 
 ---
@@ -762,21 +787,25 @@ Utility functions:
 We welcome contributions! Please follow these steps:
 
 1. **Fork the repository**
+
    ```bash
    git clone https://github.com/your-username/smart-travel-planner.git
    ```
 
 2. **Create a feature branch**
+
    ```bash
    git checkout -b feature/amazing-feature
    ```
 
 3. **Commit your changes**
+
    ```bash
    git commit -m 'Add amazing feature'
    ```
 
 4. **Push to the branch**
+
    ```bash
    git push origin feature/amazing-feature
    ```
@@ -806,6 +835,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ## 🔗 Useful Resources
 
 ### Documentation
+
 - [Nx Documentation](https://nx.dev)
 - [Angular Documentation](https://angular.io/docs)
 - [NestJS Documentation](https://docs.nestjs.com)
@@ -813,11 +843,13 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - [MongoDB Documentation](https://docs.mongodb.com)
 
 ### Tutorials
+
 - [Angular Monorepo Tutorial](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial)
 - [NestJS Getting Started](https://docs.nestjs.com/first-steps)
 - [GraphQL Best Practices](https://graphql.org/learn/best-practices)
 
 ### Tools
+
 - [Apollo Studio](https://www.apollographql.com/studio) - GraphQL IDE
 - [MongoDB Compass](https://www.mongodb.com/products/compass) - MongoDB GUI
 - [Postman](https://www.postman.com) - API Testing
