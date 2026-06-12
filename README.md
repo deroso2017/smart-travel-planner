@@ -40,7 +40,9 @@ A full-stack travel planning application built with modern web technologies. Pla
 - 📱 Responsive Design - Optimized experience across desktop, tablet, and mobile devices
 - 🌙 Dark Mode Support - Beautiful light and dark themes
 - ⚡ Modern Architecture - Built with GraphQL and a scalable full-stack architecture
-- 🚀 Planned Features (Upcoming Releases)
+- 🚀 Real-time Updates - Live collaboration powered by GraphQL subscriptions
+
+### Planned Features (Upcoming Releases)
 
 The following features are currently in development and planned for future versions:
 
@@ -49,7 +51,6 @@ The following features are currently in development and planned for future versi
 - 📍 Location Intelligence - Interactive maps and location-based recommendations
 - 💰 Budget Tracking - Expense management and cost-splitting for group trips
 - 🎒 Packing Lists - Smart packing recommendations based on destination, weather, and season
-- ⚡ Real-time Updates - Live collaboration powered by GraphQL subscriptions
 
 ---
 
