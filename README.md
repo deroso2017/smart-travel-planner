@@ -34,7 +34,8 @@ A full-stack travel planning application built with modern web technologies. Pla
 
 ## ✨ Features
 
-- ✨ Current Features
+### Current Features
+
 - 🔐 Secure Authentication - JWT-based authentication with role-based access control
 - 📱 Responsive Design - Optimized experience across desktop, tablet, and mobile devices
 - 🌙 Dark Mode Support - Beautiful light and dark themes
