@@ -882,6 +882,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 **[⬆ back to top](#-smart-travel-planner)**
 
-Made with ❤️ by [deroso2017](https://github.com/deroso2017)
+Made by [deroso2017](https://github.com/deroso2017)
 
 </div>
